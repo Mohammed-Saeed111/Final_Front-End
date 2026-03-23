@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #5f6FFF;
+  --grid-template-columns-auto: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* تطبيق الخط */
+body {
+  font-family: 'Outfit', sans-serif;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* إخفاء scrollbar في Chrome/Edge/Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* active link */
+.active hr {
+  @apply block;
+}
+
+/* active link في الموبايل */
+@media (max-width: 740px) {
+  .active p {
+    @apply text-white bg-primary;
+  }
+}
