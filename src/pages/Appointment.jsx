@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 import { useCallback, useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+=======
+import React, { useContext, useEffect, useState, useCallback } from 'react'
+import { useParams } from 'react-router-dom'
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
 import { AppContext } from '../context/AppContext'
 import { assets } from '../assets/assets'
 import RelatedDoctors from '../components/RelatedDoctors'
 
 const Appointment = () => {
   const { docId } = useParams()
+<<<<<<< HEAD
   const navigate = useNavigate()
   const { doctors, currencySymbol, token, handleBookAppointment } = useContext(AppContext)
+=======
+  const { doctors, currencySymbol } = useContext(AppContext)
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
 
   const [docInfo, setDocInfo] = useState(null)
   const [docSlots, setDocSlots] = useState([])
@@ -145,6 +154,7 @@ const Appointment = () => {
           ))}
         </div>
 
+<<<<<<< HEAD
         <button
           onClick={async () => {
             if (!token) return navigate('/login')
@@ -157,6 +167,9 @@ const Appointment = () => {
           }}
           className='bg-primary text-white text-sm font-light px-14 py-3 rounded-full mt-6'
         >
+=======
+        <button className='bg-primary text-white text-sm font-light px-14 py-3 rounded-full mt-6'>
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
           Book an appointment
         </button>
       </div>

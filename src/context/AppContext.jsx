@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createContext, useCallback, useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import {
@@ -11,10 +12,15 @@ import {
 } from '../api/userApi'
 import { getDoctorsList } from '../api/doctorApi'
 import { doctors as assetsDoctor } from '../assets/assets'
+=======
+import { createContext } from 'react'
+import { doctors } from '../assets/assets'
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
 
 const AppContext = createContext()
 
 const AppContextProvider = (props) => {
+<<<<<<< HEAD
   const currencySymbol = '$'
 
   // ─── Auth State ─────────────────────────────────────────────────────────────
@@ -167,6 +173,16 @@ const AppContextProvider = (props) => {
     handleCancelAppointment,
     handlePayment,
     logout,
+=======
+  
+  // تعريف رمز العملة لاستخدامه في كامل التطبيق
+  const currencySymbol = '$'
+
+  // الكائن الذي يحتوي على جميع البيانات المراد مشاركتها مع باقي المكونات
+  const value = {
+    doctors,
+    currencySymbol
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
   }
 
   return (
@@ -177,4 +193,8 @@ const AppContextProvider = (props) => {
 }
 
 export default AppContextProvider
+<<<<<<< HEAD
 export { AppContext }
+=======
+export { AppContext }
+>>>>>>> 89b34ae6b2302e7acd10e20fa5da75938723240f
